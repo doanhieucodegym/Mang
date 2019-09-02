@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn  nhất  trong mang</title>
+</head>
+<body>
+<script>
+    function timgiaMax(){
+        // let number = Number(prompt("nhập số phần tử cho mảng "));
+        //   let mang =new Array();
+        // for(let i =0 ;i <= number;i++){
+        //     mang = Number(prompt("Nhập phần tư"+i+1));
+        // }
+        // for(let i = 0; i <= mang.length;i++){
+        //     document.write(mang[i]);
+        // }
+        //
+
+        //b1 : tao  biết max
+        let max = 0;
+        //b2: tao biến index đếm
+        let index = 0;
+        //b3: tạo mảng
+        let mang =[2,4,5,6,3,7];
+        for(let i =0 ; i<= mang.length;i++){
+            if(mang[i] >max){
+                max = mang[i];
+                index =i;
+            }
+
+        }
+        document.write("Số max :"+max+" vị trí :"+index);
+
+
+    }
+timgiaMax();
+
+</script>
+</body>
+</html>

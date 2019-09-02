@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo Từ Điển </title>
+</head>
+<body>
+<p>Nhập từ cần tìm</p>
+
+<label>Tiếng  Anh</label>  <input type="text" value="" id="txtNhap" /> </br>
+<label>Tiếng Việt</label>  <input type="text" value="" id="txtXuat" />
+<input type="button" onclick="tuDien(); " id="dich" value="Dich"/>
+<input type="button" onclick="xoa(); " id="Xóa" value="Xóa"/>
+<script>
+function tuDien() {
+        let tienganh =["Hello","Money","job","Motorbike","boy","girl","dog","cat"];
+        let tiengViet =["Chào","Tiền","Việc làm","xe máy","con trai","con gái","con chó","con mèo"];
+        let txtAnh = document.getElementById("txtNhap").value;
+        let txtviet = document.getElementById("txtXuat").value;
+        let index = 0;
+        let count =0;
+        for(let i =0 ; i<tienganh.length;i++){
+            if(txtAnh === tienganh[i]){
+                index = i;
+                count++;
+
+                break;
+            }
+        }
+    if(count ==0){
+        alert("không tìm thấy!");
+    }
+        for(let i=0 ;i<tiengViet.length;i++){
+            if(index === i){
+                txtviet =tiengViet[i];
+            }
+
+        }
+    document.getElementById("txtXuat").value = txtviet;
+
+}
+function xoa() {
+    let a = " ";
+    let b = " ";
+    document.getElementById("txtXuat").value = a;
+    document.getElementById("txtNhap").value = a;
+}
+
+
+</script>
+</body>
+</html>
